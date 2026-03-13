@@ -1,0 +1,15 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'newApp';
+  count = 0;
+
+  happened = () => {
+    this.count++;
+  }
+}
