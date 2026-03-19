@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, Output} from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { EVENT_MANAGER_PLUGINS } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-input',
@@ -6,12 +7,23 @@ import { Component, EventEmitter, Input, Output} from '@angular/core';
   styleUrls: ['./input.component.css']
 })
 export class InputComponent {
+
+  // userName: string = "Sr. Mistério";
+
   @Output()
-  text: EventEmitter<void> = new EventEmitter();
+  Change: EventEmitter<string>= new EventEmitter();
+
   @Input()
   label: string = "";
+  @Input()
+  Value: string = "";
+  @Input()
+  name: string = "";
 
-  onClick = () => {
-    this.text.emit();
+  changed = (event: any) => {
+    // console.log(event)
+    this.name = event.srcElement.value;
+    console.log(this.name);
+    this.Change.emit(this.name);
   }
 }

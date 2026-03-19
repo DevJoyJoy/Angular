@@ -1,4 +1,9 @@
-{{count}}
-<app-button (click)="happened()" [label]="this.text.toString()"/>
-<br>
-<app-input/>
+<app-button (Click)="foiClickado()" [label]="this.count.toString()"/>
+
+<br><br>
+
+<app-button [label]="this.userName" />
+<br><br>
+<app-input (Change)="atualizaUser($event)"  [Value] = "userName"/>
+<br><br>
+<input type="text" [(ngModel)]="userName">

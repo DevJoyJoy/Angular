@@ -1,0 +1,8 @@
+<div class="card" *ngFor="let food of infofood; track: $index">
+        <img src="{{food.img}}" alt="" class="image">
+        {{food.name}}
+        <br>
+        Descrição: {{food.description}}
+        <br>
+        R${{food.price}}
+</div>

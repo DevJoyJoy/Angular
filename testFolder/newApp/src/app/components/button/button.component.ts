@@ -6,18 +6,16 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./button.component.css']
 })
 export class ButtonComponent {
-  isClicked = false;
+
+  isClicked: boolean = false;
+
   @Output()
-  click: EventEmitter<void> = new EventEmitter();
+  Click: EventEmitter<void>= new EventEmitter;
+
   @Input()
   label: string = "";
 
-  onClick = () => {
-    this.isClicked = !this.isClicked;
-    this.click.emit();
+  clicked = () => {
+    this.Click.emit();
   }
 }
-
-
-
-
