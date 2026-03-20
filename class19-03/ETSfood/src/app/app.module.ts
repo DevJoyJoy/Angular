@@ -13,6 +13,7 @@ import { CommidaComponent } from './features/main-page/commida/commida.component
 
 import { ItemCardComponent } from './features/main-page/mercado-page/item-card/item-card.component';
 import { ItemCardFoodsComponent } from './features/main-page/commida/item-cardFoods/item-cardFoods.component';
+import { MercadoModalComponent } from './features/main-page/mercado-page/mercado-modal/mercado-modal.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ItemCardFoodsComponent } from './features/main-page/commida/item-cardFo
     MercadoPageComponent,
     CommidaComponent,
     ItemCardComponent,
-    ItemCardFoodsComponent
+    ItemCardFoodsComponent,
+    MercadoModalComponent
   ],
   imports: [
     BrowserModule,

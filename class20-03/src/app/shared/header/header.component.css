@@ -1,0 +1,12 @@
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    background-color: rgb(116, 42, 165);
+    .links {
+        display:flex;
+        gap: 1rem;
+    }
+}

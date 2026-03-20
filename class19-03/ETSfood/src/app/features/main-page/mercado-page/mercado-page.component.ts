@@ -9,8 +9,20 @@ import MockProduct, { IProduct} from './products.mock';
 
 export class MercadoPageComponent {
   protected products: IProduct[] = [];
+  clickedItem?: IProduct
+  isClicked:boolean = false
 
   constructor() {
     this.products = MockProduct;
+  }
+
+  openModal(product:IProduct){
+    console.log(product.name)
+    this.clickedItem = product
+    this.isClicked = true
+  }
+
+  closeModal () {
+    this.isClicked = false
   }
 }

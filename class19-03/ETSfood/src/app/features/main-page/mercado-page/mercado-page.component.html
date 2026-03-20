@@ -1,6 +1,13 @@
 <div class="listItems">
     <app-item-card
         *ngFor="let product of products; track: $index"
-        [product]="product">
+        [product]="product"
+        (click)="openModal(product)">
     </app-item-card>
+
+    <app-mercado-modal 
+        [product]="clickedItem"
+        *ngIf="isClicked"
+        (Exit) = "closeModal()">
+    </app-mercado-modal>
 </div>
