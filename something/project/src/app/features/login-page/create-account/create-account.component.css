@@ -1,0 +1,84 @@
+:root {
+  --bg-main: #707070;
+  --card-bg: #1e293b;
+  --primary: #832222;
+  --text: #e2e8f0;
+}
+
+/* Reset básico */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text);
+}
+
+/* Centralizar tela */
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card */
+.card {
+  width: 350px;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: var(--card-bg);
+
+  border: 1px solid #334155; /* borda */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /* sombra */
+}
+
+/* Título */
+.card h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Label */
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+/* Input */
+input {
+  width: 93%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+
+  background-color: #d2d8e6;
+  color: white;
+  border: none;
+  transition: 0.2s;
+}
+
+/* Placeholder */
+input::placeholder {
+  color: #94a3b8;
+}
+
+/* Foco */
+input:focus {
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 8px var(--primary);
+}
+
+/* Botão */
+.send-form {
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 6px;
+
+  background-color: rebeccapurple;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.2s;
+}

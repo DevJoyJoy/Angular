@@ -1,0 +1,15 @@
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 15rem;
+    height: 12rem;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: rgb(173, 122, 240);
+}
+
+.image {
+    width: 5rem;
+    height: auto;
+}

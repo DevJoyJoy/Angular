@@ -15,6 +15,7 @@ import { ItemCardComponent } from './features/main-page/mercado-page/item-card/i
 import { ItemCardFoodsComponent } from './features/main-page/commida/item-cardFoods/item-cardFoods.component';
 import { MercadoModalComponent } from './features/main-page/mercado-page/mercado-modal/mercado-modal.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

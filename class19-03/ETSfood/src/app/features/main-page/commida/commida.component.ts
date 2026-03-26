@@ -9,8 +9,17 @@ import MockFood, { IFood } from './foods.mock';
 
 export class CommidaComponent {
   protected foods: IFood[] = [];
+  protected focusedFood?: IFood;
 
   constructor() {
     this.foods = MockFood;
+  }
+
+  onCardClick = (item: IFood) => {
+    this.focusedFood = item
+  }
+
+  save = () => {
+    alert('Pedido efetuado com sucesso!')
   }
 }

@@ -1,0 +1,17 @@
+<div class="listItem">
+    <app-mercado-card
+        *ngFor="let product of products; track: $index"
+        [product]="product"
+        (click)="onCardClick(product)">
+    </app-mercado-card>
+</div>
+
+<app-modal
+    *ngIf="focusedProduct"
+    onClose="focusedProduct = undefined"
+    [Confirmation]="true"
+    [Title]="'Pedido'"
+    SaveLabel="Finalizar"
+    (onSave)="save()">
+    <h2>{{focusedProduct.name}}</h2>
+</app-modal>

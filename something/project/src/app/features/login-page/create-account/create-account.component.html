@@ -1,0 +1,18 @@
+<div class="container">
+
+  <div class="card">
+    <h2>Criar Conta</h2>
+
+
+    <label for="name">Nome</label>
+    <input [(ngModel)]="name" id="name-input" type="text" placeholder="Nome Completo">
+    
+    <label for="cpf">CPF</label>
+    <input [(ngModel)]="cpf" id="cpf-input" type="text" placeholder="000.000.000-00">
+
+    <label for="pass">Senha</label>
+    <input [(ngModel)]="pass" id="pass-input" type="text" placeholder="Senha">
+    
+    <button (click)="validateForm()" class="send-form">Enviar</button>
+  </div>
+</div>

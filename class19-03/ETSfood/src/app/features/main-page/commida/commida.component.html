@@ -3,3 +3,14 @@
         [infofood]="foods">
     </app-item-cardFoods>
 </div>
+
+<app-modal 
+    *ngIf="focusedFood"
+    (onClose)="focusedFood = undefined"
+    [Confirmation]="true"
+    [Title]="'Modalzinho'"
+    SaveLabel="Efetuar pedido"
+    (onSave)="save()"
+>
+    <h1>minha comidinha</h1>
+</app-modal>
