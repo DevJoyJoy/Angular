@@ -1,0 +1,35 @@
+.screen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainBox {
+    background-color: rgb(98, 98, 116);
+    width: 100rem;
+    height: 50rem;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 1vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.pixel {
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    transition: .3s;
+    border: none;
+    color: white;
+}
+
+.pixel:hover {
+    background-color: rgb(162, 162, 173);
+}

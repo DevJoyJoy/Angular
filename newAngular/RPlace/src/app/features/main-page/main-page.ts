@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './main-page.html',
   styleUrl: './main-page.css',
 })
-export class MainPage {}
+export class MainPage {
+  items = [1, 2, 3]
+}
