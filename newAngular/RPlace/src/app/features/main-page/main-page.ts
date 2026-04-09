@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './main-page.css',
 })
 export class MainPage {
-  items = [1, 2, 3]
+  //faz um array com a variavel
+  readonly totalPixels = 150 * 80;
+  pixels = Array(this.totalPixels);
 }

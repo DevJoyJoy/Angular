@@ -1,10 +1,9 @@
 <div class="screen">
-    <div class="mainBox">
+    <form class="mainBox" action="get" [formGroup]="subscribeForm" (ngSubmit)="subscribe()">
         <p class="title">Create an account</p>
-        <input class="inputs" type="text" placeholder="Name">
-        <input class="inputs" type="text" placeholder="E-mail">
-        <input class="inputs" type="text" placeholder="Password">
-        <button class="buttons">Create</button>
+        <input class="inputs" type="text" placeholder="Username" formControlName="username">
+        <input class="inputs" type="text" placeholder="Password" formControlName="password">
+        <button class="buttons" type="submit">Create</button>
         <button class="buttons">Already have an account? Sign in!</button>
-    </div>
+    </form>
 </div>

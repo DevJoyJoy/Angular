@@ -8,17 +8,12 @@
 
 .mainBox {
     background-color: rgb(98, 98, 116);
-    width: 100rem;
-    height: 50rem;
+    width: fit-content;
     border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 3rem;
-    padding: 1vh;
-    flex-direction: row;
-    flex-wrap: wrap;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(150, 10px);
+    grid-template-rows: repeat(80, 10px);
 }
 
 .pixel {
@@ -27,7 +22,18 @@
     height: 10px;
     transition: .3s;
     border: none;
-    color: white;
+    padding: 0;
+    background: none;
+}
+
+/* Esse linha é oq esta tirando mesmo o padding do quadradinho, pois esse padding eh do navegador */
+.pixel::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+/* Essa linha é oq tira a bordinha do input */
+.pixel::-webkit-color-swatch {
+    border: none;
 }
 
 .pixel:hover {

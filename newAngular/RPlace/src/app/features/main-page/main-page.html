@@ -1,9 +1,7 @@
 <div class="screen">
     <div class="mainBox">
-        @for (item of items; track $index){
-            @for (item of items; track $index){
-                <input type="color" class="pixel">
-            }
+        @for (pixel of pixels; track $index) {
+            <input type="color" class="pixel" value="#ffffff">
         }
     </div>
 </div>
