@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AuthApi } from '../../domain/auth.api';
 import { FormGroup, Validators, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { LoginDto } from '../../domain/userInterface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
@@ -10,8 +11,15 @@ import { LoginDto } from '../../domain/userInterface';
   styleUrl: './login-page.css',
 })
 export class LoginPage {
-  constructor(private api: AuthApi) {}
+  constructor(private api: AuthApi, private router: Router) {}
 
+  protected isSubscribe: boolean = false;
+
+  ngOnInit() {
+    if(sessionStorage.getItem('token'))
+      this.router.navigate(['']);
+  }
+  
   loginForm : FormGroup = new FormGroup({
     username: new FormControl("", [Validators.required]),
     password: new FormControl("", [Validators.required])
@@ -30,6 +38,10 @@ export class LoginPage {
     return this.loginForm.get("password");
   }
   
+  formAction = () => {
+
+  }
+
   login = () => {
     if(!this.loginForm.valid){
       alert("Campos inválidos");

@@ -1,7 +1,20 @@
 <div class="screen">
     <div class="mainBox">
-        @for (pixel of pixels; track $index) {
-            <input type="color" class="pixel" value="#ffffff">
-        }
+        @for (row of pixels; track $index) {
+        <div class="row">
+            @for (pixel of row; track $index) {
+                <input [value]="pixel.color" (onChange)="updateData(pixel)" />
+            }
+        </div>
+    }
+    </div>
+    <div class="navColors">
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
     </div>
 </div>

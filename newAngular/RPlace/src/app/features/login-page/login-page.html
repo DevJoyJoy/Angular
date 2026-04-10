@@ -1,9 +1,24 @@
 <div class="screen">
-    <form class="mainBox" action="get" [formGroup]="loginForm" (ngSubmit)="login()">
-            <p class="title">Log in to paint</p>
-            <input class="inputs" type="text" placeholder="Username" formControlName="username">
-            <input class="inputs" type="text" placeholder="Password" formControlName="password">
-            <button class="buttons" type="submit" routerLink="">Login</button>
-            <button class="buttons">Don't have an account? Create one!</button>
+    <form class="mainBox" action="get" [formGroup]="loginForm" (ngSubmit)="formAction()">
+        @if (isSubscribe) {
+            <h1>Subscribe now!</h1>
+        }@else {
+            <h1>Login to paint</h1>
+        }
+        <input class="inputs" type="text" placeholder="Username" formControlName="username">
+        <input class="inputs" type="text" placeholder="Password" formControlName="password">
+        <button class="buttons" type="submit" routerLink="">
+            @if (isSubscribe) {
+                Subscribe
+            }@else {
+                Login
+            }
+        </button>
+        <button class="buttons">@if (isSubscribe) {
+                Already have an account? Sign in!
+            }@else {
+                Don't have an account? Create one!
+            }
+        </button>
     </form>
 </div>
