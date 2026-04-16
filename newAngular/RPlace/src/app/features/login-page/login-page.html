@@ -1,5 +1,5 @@
 <div class="screen">
-    <form class="mainBox" action="get" [formGroup]="loginForm" (ngSubmit)="formAction()">
+    <form class="mainBox" [formGroup]="loginForm" (ngSubmit)="formAction()">
         @if (isSubscribe) {
             <h1>Subscribe now!</h1>
         }@else {
